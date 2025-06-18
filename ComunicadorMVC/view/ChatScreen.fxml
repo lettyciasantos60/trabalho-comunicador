@@ -1,0 +1,22 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ChatScreenController">
+    <top>
+        <Label text="Comunicador JavaFX" style="-fx-font-size: 18px; -fx-padding: 10px;" />
+    </top>
+    <center>
+        <VBox spacing="5" padding="10">
+            <TextArea fx:id="chatArea" editable="false" wrapText="true" prefHeight="400"/>
+            <HBox spacing="5">
+                <TextField fx:id="mensagemField" HBox.hgrow="ALWAYS" promptText="Digite sua mensagem..." />
+                <Button text="Enviar" onAction="#enviarMensagem"/>
+                <Button text="Arquivo" onAction="#enviarArquivo"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
